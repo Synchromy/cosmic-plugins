@@ -1,0 +1,25 @@
+{
+  "name": "Cosmic",
+  "slug": "cosmic",
+  "developer": "Synchromy",
+  "server_url": "https://app.gocosmic.ai/mcp",
+  "auth": "oauth_dcr",
+  "short": "Your work's memory, at hand",
+  "one_line": "Answer from what Cosmic knows about your work, people and decisions, and save what matters back to it.",
+  "description": "Cosmic is one memory of your work, kept by you, for every assistant you use. It reads the sources you connect, such as mail, calendar, meetings, tasks and files, and keeps pages about your work, the people in it and the decisions you make.\n\nWith Cosmic connected, your assistant can answer from all of it: who you are meeting, what you promised and what was said last time. It can save facts and notes you ask it to keep, pick up work another session left, and, if you choose, keep a digest of each session so the next one starts where this one ended.\n\nYou sign in to your own Cosmic and choose the access there: Read, or Read and add. For Read and add you also choose whether sessions are kept as a short summary or in full detail. You can change either, or disconnect, from the Agents page in your Cosmic at any time.",
+  "categories": ["Productivity", "Knowledge"],
+  "default_prompts": [
+    "What did we decide about this last week?",
+    "Who is this person and what do we have going on?",
+    "What's coming up for me this week?"
+  ],
+  "urls": {
+    "website": "https://gocosmic.ai",
+    "docs": "https://app.gocosmic.ai/docs/connector",
+    "support": "mailto:hello@synchromy.ai",
+    "privacy": "https://app.gocosmic.ai/privacy",
+    "terms": "https://app.gocosmic.ai/terms",
+    "repository": "https://github.com/Synchromy/cosmic-plugins"
+  },
+  "email": "hello@synchromy.ai"
+}

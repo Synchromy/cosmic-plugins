@@ -1,0 +1,16 @@
+{
+  "name": "synchromy",
+  "owner": {
+    "name": "Synchromy",
+    "email": "hello@synchromy.ai"
+  },
+  "description": "Synchromy's plugins for Claude.",
+  "plugins": [
+    {
+      "name": "cosmic",
+      "source": "./claude",
+      "description": "Answer from what Cosmic knows about your work, people and decisions, and save what matters back to it.",
+      "version": "0.1.0"
+    }
+  ]
+}

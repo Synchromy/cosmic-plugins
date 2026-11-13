@@ -1,0 +1,34 @@
+name: check
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build
+        run: |
+          python3 adapters/claude/build.py
+          python3 adapters/openai/build.py
+      - name: The committed Claude plugin is what the build writes
+        run: git diff --exit-code -- claude .claude-plugin
+      - name: Copy, skill, tool set and review cases
+        run: python3 scripts/check.py
+      - name: Claude plugin validation
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude plugin validate claude --strict
+          claude plugin validate . --strict
+      - name: OpenAI package
+        uses: actions/upload-artifact@v4
+        with:
+          name: cosmic-openai
+          path: dist/cosmic-openai.zip

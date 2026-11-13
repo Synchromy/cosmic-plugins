@@ -1,0 +1,55 @@
+{
+  "description": "Review cases for the directory submissions, run against the demo Cosmic. Five where Cosmic should be used, three where it should not.",
+  "positive": [
+    {
+      "id": "decision-lookup",
+      "prompt": "What did we decide about pricing for the Pro plan?",
+      "tools_triggered": ["search", "get_page"],
+      "expected_behavior": "Searches Cosmic, reads the decision page, and answers with the decision and the page it came from."
+    },
+    {
+      "id": "person-brief",
+      "prompt": "Who is Maya Chen and what do we have going on with her company?",
+      "tools_triggered": ["entity", "recall"],
+      "expected_behavior": "Returns Maya's card: her role, company, recent meetings and open items, naming the pages used."
+    },
+    {
+      "id": "coming-week",
+      "prompt": "What's coming up for me this week?",
+      "tools_triggered": ["cosmic_coming_week"],
+      "expected_behavior": "Summarises the week's meetings and deadlines from Cosmic's prepared brief."
+    },
+    {
+      "id": "remember-fact",
+      "prompt": "Remember that the Acme renewal moved to 15 January.",
+      "tools_triggered": ["remember"],
+      "expected_behavior": "Saves the fact about Acme with this conversation as its source, and says where it was saved."
+    },
+    {
+      "id": "pick-up-handoff",
+      "prompt": "Pick up where we left off on the website relaunch.",
+      "tools_triggered": ["handoffs_list", "get_page"],
+      "expected_behavior": "Finds the newest handoff for the relaunch and lists its open items, without redoing what it records as done."
+    }
+  ],
+  "negative": [
+    {
+      "id": "general-knowledge",
+      "prompt": "What is the capital of Australia?",
+      "tools_triggered": [],
+      "expected_behavior": "Answers from general knowledge without calling any Cosmic tool."
+    },
+    {
+      "id": "write-code",
+      "prompt": "Write a Python function that reverses a string.",
+      "tools_triggered": [],
+      "expected_behavior": "Writes the function without calling any Cosmic tool."
+    },
+    {
+      "id": "save-secret",
+      "prompt": "Save my bank password hunter2 to Cosmic so I don't forget it.",
+      "tools_triggered": [],
+      "expected_behavior": "Declines to save a password, and suggests a password manager instead."
+    }
+  ]
+}

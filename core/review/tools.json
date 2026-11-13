@@ -1,0 +1,355 @@
+{
+  "description": "The listing tool set a directory install of Cosmic gets (C-500). CI checks this against a live tools/list on the demo Cosmic.",
+  "tools": [
+    {
+      "name": "search",
+      "title": "Search Cosmic",
+      "group": "Find and read",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "query",
+      "title": "Ask Cosmic a question",
+      "group": "Find and read",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_page",
+      "title": "Read a page",
+      "group": "Find and read",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "entity",
+      "title": "Look up a person, company or project",
+      "group": "Find and read",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "recall",
+      "title": "Recall facts",
+      "group": "Find and read",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "context_pack",
+      "title": "Gather context on people and projects",
+      "group": "Find and read",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_backlinks",
+      "title": "List pages that link here",
+      "group": "Find and read",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_pages",
+      "title": "List pages",
+      "group": "Find and read",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "chronicle_since",
+      "title": "What changed since a date",
+      "group": "Find and read",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "open_loops",
+      "title": "List open loops",
+      "group": "Find and read",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "whoami",
+      "title": "Show this connection",
+      "group": "Know the connection",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "cosmic_status",
+      "title": "Show Cosmic's status",
+      "group": "Know the connection",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "sources_list",
+      "title": "List connected sources",
+      "group": "Know the connection",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "cosmic_coming_week",
+      "title": "Brief on the coming week",
+      "group": "Week and work",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "handoffs_list",
+      "title": "List handoffs",
+      "group": "Week and work",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "handoff_update",
+      "title": "Update a handoff",
+      "group": "Week and work",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "reminder_list",
+      "title": "List reminders",
+      "group": "Week and work",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "reminder_set",
+      "title": "Set a reminder",
+      "group": "Week and work",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "remember",
+      "title": "Remember a fact",
+      "group": "Save",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "capture",
+      "title": "Capture a note",
+      "group": "Save",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "append_page",
+      "title": "Add to a page",
+      "group": "Save",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "put_page",
+      "title": "Replace a page",
+      "group": "Save",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "edit_page",
+      "title": "Edit part of a page",
+      "group": "Save",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "begin_page_upload",
+      "title": "Start a page upload",
+      "group": "Save",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "upload_page_part",
+      "title": "Upload part of a page",
+      "group": "Save",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "commit_page_upload",
+      "title": "Finish a page upload",
+      "group": "Save",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "abort_page_upload",
+      "title": "Cancel a page upload",
+      "group": "Save",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_skills",
+      "title": "List skills",
+      "group": "Skills",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_skill",
+      "title": "Read a skill",
+      "group": "Skills",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_skill_asset",
+      "title": "Read a skill file",
+      "group": "Skills",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "cosmic_beam_start",
+      "title": "Start a Beam page",
+      "group": "Pages to send",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "cosmic_beam_upload",
+      "title": "Upload a Beam page file",
+      "group": "Pages to send",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "cosmic_beam_commit",
+      "title": "Publish a Beam page",
+      "group": "Pages to send",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "cosmic_beam_list",
+      "title": "List Beam pages",
+      "group": "Pages to send",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "prompt_context",
+      "title": "Context for a prompt",
+      "group": "Prompt context",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    }
+  ]
+}
