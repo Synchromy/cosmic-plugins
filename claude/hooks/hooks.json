@@ -1,0 +1,20 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:cosmic:cosmic",
+            "tool": "prompt_context",
+            "input": {
+              "prompt": "${prompt}",
+              "session_id": "${session_id}"
+            },
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

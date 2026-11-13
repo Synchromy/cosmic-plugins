@@ -1,0 +1,32 @@
+{
+  "name": "cosmic",
+  "displayName": "Cosmic",
+  "version": "0.1.0",
+  "description": "Answer from what Cosmic knows about your work, people and decisions, and save what matters back to it.",
+  "author": {
+    "name": "Synchromy",
+    "email": "hello@synchromy.ai",
+    "url": "https://gocosmic.ai"
+  },
+  "homepage": "https://app.gocosmic.ai/docs/connector",
+  "repository": "https://github.com/Synchromy/cosmic-plugins",
+  "license": "MIT",
+  "keywords": [
+    "memory",
+    "knowledge",
+    "context",
+    "notes",
+    "cosmic"
+  ],
+  "icon": "./assets/cosmic.png",
+  "documentationUrl": "https://app.gocosmic.ai/docs/connector",
+  "supportUrl": "https://app.gocosmic.ai/docs/connector",
+  "privacyPolicyUrl": "https://app.gocosmic.ai/privacy",
+  "termsOfServiceUrl": "https://app.gocosmic.ai/terms",
+  "mcpServers": {
+    "cosmic": {
+      "type": "http",
+      "url": "https://app.gocosmic.ai/mcp"
+    }
+  }
+}
