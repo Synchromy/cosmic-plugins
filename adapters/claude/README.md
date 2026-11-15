@@ -5,7 +5,7 @@ Cosmic is one memory of your work, kept by you, for every assistant you use. It 
 ## What it adds
 
 - **One MCP server, `cosmic`, at `https://app.gocosmic.ai/mcp`.** It searches, reads and adds to your Cosmic.
-- **A skill, `cosmic`,** that describes how the tools fit together: searching your own work, picking up handoffs, reading a page before replacing it, and keeping session digests at the level you chose.
+- **A skill, `cosmic`,** that describes how the tools fit together: searching your own work, picking up handoffs, reading a page before replacing it, and saving session digests at the level you chose.
 - **One hook, before each prompt, in Claude Code.** See "What it sends" below.
 
 ## Setting it up
@@ -18,7 +18,7 @@ Cosmic is one memory of your work, kept by you, for every assistant you use. It 
    ```
 
    In claude.ai and Cowork, add Cosmic from the directory.
-2. Sign in when Claude asks. You sign in at app.gocosmic.ai, pick your Cosmic if you have more than one, and press Allow on your Cosmic's own page. There you choose the access, Read or Read and add, and for Read and add whether sessions are kept as a summary or in full detail.
+2. Sign in when Claude asks. You sign in at app.gocosmic.ai, pick your Cosmic if you have more than one, and press Allow on your Cosmic's own page. There you choose the access, Read or Read and add, and for Read and add whether sessions are saved as a summary or in full detail.
 3. Nothing is stored in a file by this plugin. Claude holds the sign-in.
 
 You can change the access or the digest level, or disconnect Claude, from the Agents page in your Cosmic at any time.
