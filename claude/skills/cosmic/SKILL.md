@@ -34,7 +34,7 @@ When the person chose to keep digests of their sessions, Cosmic keeps one page p
 
 - **Read:** no digest. Cosmic refuses digest writes.
 - **Summary:** what was decided, what was done, what is still open, and the people, companies and pages involved, with the assistant's name and the dates. No pasted text, code or quotes.
-- **Detailed:** the summary, plus every kept turn written out in full in the kept-turns section. Long sessions go up in parts with `begin_page_upload`, `upload_page_part` and `commit_page_upload`.
+- **Detailed:** the summary, plus every kept turn written out in full under a heading that reads exactly `## Kept turns`. At Summary, Cosmic refuses a digest that has this section. Long sessions go up in parts with `begin_page_upload`, `upload_page_part` and `commit_page_upload`.
 
 A digest for a session already on Cosmic adds to that page; it never removes a turn the page holds. Decisions and lasting facts in a digest are also saved with `remember`, citing the digest, and Cosmic shows them as written by an agent until the person confirms them.
 Claude Code users who want every turn copied exactly from Claude Code's own session file can use Cosmic's setup line, which keeps local session capture: https://app.gocosmic.ai/setup
