@@ -32,15 +32,15 @@ Earlier work on a topic often ends with a page of type `handoff`. `handoffs_list
 
 ## Session digests
 
-When the person chose to keep digests of their sessions, Cosmic keeps one page per session under `conversations/sessions/`. `whoami` gives the connection's digest level, set on Cosmic's consent page and changeable on its Agents card:
+When the person chose to save digests of their sessions, Cosmic holds one page per session under `conversations/sessions/`. `whoami` gives the connection's digest level, set on Cosmic's consent page and changeable on its Agents card:
 
 - **Read:** no digest. Cosmic refuses digest writes.
 - **Summary:** what was decided, what was done, what is still open, and the people, companies and pages involved, with the assistant's name and the dates. No pasted text, code or quotes.
-- **Detailed:** the summary, plus every kept turn written out in full under a heading that reads exactly `## Kept turns`. At Summary, Cosmic refuses a digest that has this section. Long sessions go up in parts with `begin_page_upload`, `upload_page_part` and `commit_page_upload`.
+- **Detailed:** the summary, plus every message of the conversation written out in full under a heading that reads exactly `## Full conversation`, one `###` heading per message. At Summary, Cosmic refuses a digest that has this section. Long sessions go up in parts with `begin_page_upload`, `upload_page_part` and `commit_page_upload`.
 
-A digest for a session already on Cosmic adds to that page; it never removes a turn the page holds. Decisions and lasting facts in a digest are also saved with `remember`, citing the digest, and Cosmic shows them as written by an agent until the person confirms them.
+A digest for a session already on Cosmic adds to that page; it never removes a message the page holds. Decisions and lasting facts in a digest are also saved with `remember`, citing the digest, and Cosmic shows them as written by an agent until the person confirms them.
 <!-- only: claude -->
-Claude Code users who want every turn copied exactly from Claude Code's own session file can use Cosmic's setup line, which keeps local session capture: https://app.gocosmic.ai/setup
+Claude Code users who want every message copied exactly from Claude Code's own session file can use Cosmic's setup line, which also captures sessions on their computer: https://app.gocosmic.ai/setup
 <!-- end -->
 <!-- only: openai -->
 Codex users who want full tools and local session capture can use Cosmic's setup line instead of this plugin: https://app.gocosmic.ai/setup
