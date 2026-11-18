@@ -56,8 +56,10 @@ cases = json.loads((ROOT / 'core/review/cases.json').read_text())
 check(len(cases['positive']) == 5, 'need exactly 5 positive review cases')
 check(len(cases['negative']) == 3, 'need exactly 3 negative review cases')
 for c in cases['positive'] + cases['negative']:
-    for k in ('id', 'prompt', 'tools_triggered', 'expected_behavior'):
+    for k in ('id', 'description', 'prompt', 'tools_triggered', 'expected_behavior'):
         check(k in c, f'case {c.get("id")} lacks {k}')
+    for t in c.get('tools_triggered', []):
+        check(t in names, f'case {c.get("id")} names {t}, which is not in the listing tool set')
 
 if '--live' in sys.argv:
     live = json.loads(Path(sys.argv[sys.argv.index('--live') + 1]).read_text())

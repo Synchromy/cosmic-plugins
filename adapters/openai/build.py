@@ -14,6 +14,25 @@ from common import ROOT, copy, skill_for, version  # noqa: E402
 OUT = ROOT / 'dist' / 'openai'
 
 
+def review() -> dict:
+    """The review cases from core/review/cases.json in the shape the portal imports."""
+    cases = json.loads((ROOT / 'core' / 'review' / 'cases.json').read_text())
+
+    def case(x):
+        return {
+            'description': x['description'],
+            'prompt': x['prompt'],
+            'tools_triggered': ', '.join(x['tools_triggered']),
+            'expected_behavior': x['expected_behavior'],
+        }
+
+    return {
+        'test_cases': {'positive': [case(x) for x in cases['positive']], 'negative': [case(x) for x in cases['negative']]},
+        'commerce': False,
+        'commerce_description': 'Cosmic does not sell products or process payments.',
+    }
+
+
 def build() -> Path:
     c = copy()
     if OUT.exists():
@@ -43,12 +62,19 @@ def build() -> Path:
                     'category': 'Productivity',
                     'capabilities': ['Read', 'Write'],
                     'websiteURL': c['urls']['website'],
+                    'supportURL': c['urls']['docs'],
                     'privacyPolicyURL': c['urls']['privacy'],
                     'termsOfServiceURL': c['urls']['terms'],
                     'defaultPrompt': c['default_prompts'],
+                    'brandColor': c['brand_color'],
+                    'brandColorDark': c['brand_color'],
                     'composerIcon': './assets/cosmic.png',
+                    'composerIconDark': './assets/cosmic.png',
                     'logo': './assets/cosmic.png',
-                }
+                    'logoDark': './assets/cosmic.png',
+                },
+                'review': review(),
+                'publication': {'release_notes': c['release_notes']},
             }
         },
     }

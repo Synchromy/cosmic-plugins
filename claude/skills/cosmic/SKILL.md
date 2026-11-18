@@ -18,7 +18,7 @@ Cosmic is the person's own memory of their work. It reads the sources they conne
 
 ## A tool this connection does not offer
 
-An assistant that added Cosmic from Claude's or ChatGPT's directory has only some of Cosmic's tools. When the person wants something those tools cannot do, or Cosmic answers that a tool is not available through the directory listing, tell them they can open "Get every tool" on this assistant's card on the Agents page of their Cosmic. That section says how to connect with every tool.
+An assistant that added Cosmic from Claude's, ChatGPT's or Cursor's directory has only some of Cosmic's tools. When the person wants something those tools cannot do, or Cosmic answers that a tool is not available through the directory listing, tell them they can open "Get every tool" on this assistant's card on the Agents page of their Cosmic. That section says how to connect with every tool.
 
 ## Picking up earlier work
 
