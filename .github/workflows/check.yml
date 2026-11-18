@@ -18,8 +18,9 @@ jobs:
         run: |
           python3 adapters/claude/build.py
           python3 adapters/openai/build.py
-      - name: The committed Claude plugin is what the build writes
-        run: git diff --exit-code -- claude .claude-plugin
+          python3 adapters/cursor/build.py
+      - name: The committed Claude and Cursor plugins are what the build writes
+        run: git diff --exit-code -- claude .claude-plugin cursor .cursor-plugin
       - name: Copy, skill, tool set and review cases
         run: python3 scripts/check.py
       - name: Claude plugin validation

@@ -1,6 +1,6 @@
 # Cosmic plugins
 
-The official Cosmic packages for Claude (connector and plugin) and for OpenAI (ChatGPT and Codex), built from one source. Every package connects to the same address, `https://app.gocosmic.ai/mcp`, where the person signs in and picks their own Cosmic.
+The official Cosmic packages for Claude (connector and plugin), for OpenAI (ChatGPT and Codex) and for Cursor, built from one source. Every package connects to the same address, `https://app.gocosmic.ai/mcp`, where the person signs in and picks their own Cosmic.
 
 ## Layout
 
@@ -12,6 +12,7 @@ The official Cosmic packages for Claude (connector and plugin) and for OpenAI (C
   - `assets/`: the icon.
 - `adapters/claude/build.py`: writes `claude/` (the plugin Claude's directory reads) and `.claude-plugin/marketplace.json`.
 - `adapters/openai/build.py`: writes `dist/openai/` and `dist/cosmic-openai.zip` for platform.openai.com/plugins.
+- `adapters/cursor/build.py`: writes `cursor/` (the plugin the Cursor Marketplace reads) and `.cursor-plugin/marketplace.json`.
 - `scripts/check.py`: the listing copy limits, no em dash or emoji, no orders to the model in the skill, every tool annotated, and the review case counts. With `--live <file>` it compares the tool set with a `tools/list` answer from the demo Cosmic.
 
 ## Build and check
@@ -19,12 +20,13 @@ The official Cosmic packages for Claude (connector and plugin) and for OpenAI (C
 ```
 python3 adapters/claude/build.py
 python3 adapters/openai/build.py
+python3 adapters/cursor/build.py
 python3 scripts/check.py
 claude plugin validate claude --strict
 claude plugin validate . --strict
 ```
 
-CI runs the same and fails when `claude/` is not what the build writes.
+CI runs the same and fails when `claude/` or `cursor/` is not what the build writes.
 
 ## Adding an assistant
 
