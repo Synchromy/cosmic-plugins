@@ -28,6 +28,7 @@ for p in copy['default_prompts']:
     check(len(p) <= 128, f'default prompt over 128 characters: {p}')
 
 texts = [ROOT / 'core/copy.json', ROOT / 'core/skills/cosmic/SKILL.md', ROOT / 'README.md', ROOT / 'core/review/cases.json']
+texts += sorted((ROOT / 'core/commands').glob('*.md')) + [ROOT / 'adapters/claude/README.md']
 EMOJI = re.compile('[\U0001F300-\U0001FAFF☀-➿]')
 for f in texts:
     if f.exists():
@@ -47,6 +48,12 @@ for t in tools:
     for h in ('readOnlyHint', 'destructiveHint', 'openWorldHint'):
         check(isinstance(a.get(h), bool), f'{t["name"]} lacks an explicit {h}')
     check(bool(t.get('title')), f'{t["name"]} has no title')
+# A command names only listed tools, and never runs on its own.
+for cmd in sorted((ROOT / 'core/commands').glob('*.md')):
+    t = cmd.read_text()
+    check('disable-model-invocation: true' in t, f'{cmd.name} can be invoked by the model')
+    for name in set(re.findall(r'`([a-z][a-z_]+)`', t)):
+        check(name in names, f'{cmd.name} names {name}, which is not in the listing tool set')
 for name in set(re.findall(r'`([a-z][a-z_]+)`', skill)):
     if '_' in name or name in {'search', 'query', 'entity', 'recall', 'remember', 'capture', 'whoami'}:
         check(name in names or name in {'include_content', 'prompt_context'} | names,
