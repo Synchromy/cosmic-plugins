@@ -7,6 +7,13 @@ Cosmic is one memory of your work, kept by you, for every assistant you use. It 
 - **One MCP server, `cosmic`, at `https://app.gocosmic.ai/mcp`.** It searches, reads and adds to your Cosmic.
 - **A skill, `cosmic`,** that describes how the tools fit together: searching your own work, picking up handoffs, reading a page before replacing it, and saving session digests at the level you chose.
 - **One hook, before each prompt, in Claude Code.** See "What it sends" below.
+- **Three commands you run yourself.** Claude does not run them on its own.
+
+  | Command | What it does |
+  | --- | --- |
+  | `/cosmic:status` | Shows your access level, which Cosmic this is, your digest level and how current each source is |
+  | `/cosmic:search <words>` | Lists the pages in your Cosmic that match |
+  | `/cosmic:remember <fact>` | Saves one fact to your Cosmic and says which page it went to |
 
 ## Setting it up
 
@@ -22,6 +29,12 @@ Cosmic is one memory of your work, kept by you, for every assistant you use. It 
 3. Nothing is stored in a file by this plugin. Claude holds the sign-in.
 
 You can change the access or the digest level, or disconnect Claude, from the Agents page in your Cosmic at any time.
+
+## Check it works
+
+1. Run `/cosmic:status`. It should name your Cosmic and your access level.
+2. Ask Claude something only your own work can answer, such as "What did we decide about this last week?". The answer should name the Cosmic pages it came from.
+3. With Read and add, run `/cosmic:remember` with a fact, then find it with `/cosmic:search`.
 
 ## What it sends, and where
 

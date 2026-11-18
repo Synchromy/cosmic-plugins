@@ -3,7 +3,7 @@ and the marketplace at .claude-plugin/marketplace.json.
 
 Format: code.claude.com/docs/en/plugins/manifest-reference, hooks reference and
 marketplace-reference (read 12 November 2026). One http server at the shared address, the cosmic
-skill, and one UserPromptSubmit mcp_tool hook calling prompt_context on the plugin's own server.
+skill, three commands the person runs (core/commands/), and one UserPromptSubmit mcp_tool hook calling prompt_context on the plugin's own server.
 No userConfig, no scripts, no command hooks.
 """
 import json, shutil, sys
@@ -27,6 +27,11 @@ def build() -> Path:
     shutil.copy(ROOT / 'LICENSE', OUT / 'LICENSE')
     shutil.copy(ROOT / 'adapters' / 'claude' / 'README.md', OUT / 'README.md')
     (OUT / 'skills' / 'cosmic' / 'SKILL.md').write_text(skill_for('claude'))
+    # The person's own commands (/cosmic:status, /cosmic:search, /cosmic:remember), each a skill
+    # the model does not invoke on its own (disable-model-invocation).
+    for cmd in sorted((ROOT / 'core' / 'commands').glob('*.md')):
+        (OUT / 'skills' / cmd.stem).mkdir(parents=True)
+        shutil.copy(cmd, OUT / 'skills' / cmd.stem / 'SKILL.md')
     plugin = {
         'name': c['slug'],
         'displayName': c['name'],
