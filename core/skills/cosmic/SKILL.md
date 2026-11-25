@@ -31,7 +31,7 @@ Earlier work on a topic often ends with a page of type `handoff`. `handoffs_list
 - `remember` stores one fact, the entity it is about and where it came from. `capture` stores a quick note. `append_page` adds to the end of a page.
 - `put_page` replaces a whole page. Read the page with `get_page` first and send the complete page back. `edit_page` changes part of a page.
 - `whoami` shows what this connection may write and where.
-- After a write, tell the person what happened: the page the note became. Call it saved only when Cosmic's answer confirms it. A refusal is not a save; say so and why.
+- After a write, tell the person what happened: the page the note became. Call it saved only when Cosmic's answer confirms it. A refusal is not a save; say so and why. An answer that says the save is pending carries a request id, and `get_write_request` with that id says whether it has completed.
 - Never save passwords, sign-in codes, tokens, card details, or anything the person marked confidential.
 
 ## Session digests
