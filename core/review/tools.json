@@ -232,6 +232,16 @@
       }
     },
     {
+      "name": "get_write_request",
+      "title": "Check a pending save",
+      "group": "Save",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
       "name": "begin_page_upload",
       "title": "Start a page upload",
       "group": "Save",
